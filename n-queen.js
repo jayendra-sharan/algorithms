@@ -9,21 +9,23 @@ function canExtendToSolution (perm) {
   }
   return true;
 }
-
+let found = false;
 function extend (perm, range) {
-  if (perm.length === range) {
-    console.log(perm);
-    return;
-  }
-  for (let i = 0; i < range; i++) {
-    if (perm.indexOf(i) < 0) {
-      perm.push(i);
-      if (canExtendToSolution(perm)) {
-        extend(perm, range);
+  if (!found) {
+    if (perm.length === range) {
+      found = true;
+      console.log(perm);
+    }
+    for (let i = 0; i < range; i++) {
+      if (perm.indexOf(i) < 0) {
+        perm.push(i);
+        if (canExtendToSolution(perm)) {
+          extend(perm, range);
+        }
+        perm.pop();
       }
-      perm.pop();
     }
   }
 }
 
-extend([], 4);
+extend([], 20);
