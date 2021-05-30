@@ -10,7 +10,7 @@ function canExtendToSolution (perm) {
   return true;
 }
 let found = false;
-function extend (perm, range) {
+function findNQueen (perm, range) {
   if (!found) {
     if (perm.length === range) {
       found = true;
@@ -20,7 +20,7 @@ function extend (perm, range) {
       if (perm.indexOf(i) < 0) {
         perm.push(i);
         if (canExtendToSolution(perm)) {
-          extend(perm, range);
+          findNQueen(perm, range);
         }
         perm.pop();
       }
