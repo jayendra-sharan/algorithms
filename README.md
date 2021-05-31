@@ -15,3 +15,11 @@
 1. `gcd`: Naive/iterative solution
 2. `euclidGcd`: Euclidean algorithm for finding GCD of two numbers
 3. `findGcd`: Find GCD of N numbers - given in an array
+
+## Mean, Median, Mode
+1. `findMean`: finds the mean of the given array, i.e. average
+2. `findMedian`: finds the median, i.e. the middle number in the sorted array. If there are 2 middle numbers, then the median is average of the two middle numbers.
+3. `findMode`: Maximum frequency of the numbers in the list.
+
+## Generator
+1. `generator`: Simple utility function to generate a list of numbers.
